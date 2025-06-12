@@ -25,7 +25,7 @@ kind: BGPPeer
 metadata:
   creationTimestamp: null
   name: peer1
-  namespace: metallb-system
+  namespace: argocd
 spec:
   holdTime: 1m30s
   myASN: 64512
@@ -39,7 +39,7 @@ kind: IPAddressPool
 metadata:
   creationTimestamp: null
   name: default
-  namespace: metallb-system
+  namespace: argocd
 spec:
   addresses:
   - 172.18.0.2-172.18.0.5
@@ -54,7 +54,7 @@ kind: L2Advertisement
 metadata:
   creationTimestamp: null
   name: l2advertisement1
-  namespace: metallb-system
+  namespace: argocd
 spec:
   ipAddressPools:
   - default
