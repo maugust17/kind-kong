@@ -81,7 +81,7 @@ Edit the file [argocd-metallb.yaml](config/argocd-metallb.yaml) adding the ip ra
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
 
-helm install argo-cd argo/argo-cd --create-namespace --namespace argocd --version 4.5.7 --values resources/argocd-values.yaml
+helm install argo-cd argo/argo-cd --create-namespace --namespace argocd --version 8.0.17 --values resources/argocd-values.yaml
 
 # Check pods
 kubectl get pod -n argocd --watch
