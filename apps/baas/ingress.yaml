@@ -1,0 +1,20 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: go-ms-baas-test-ingress
+  labels:
+    app: go-ms-baas-test
+spec:
+  ingressClassName: kong
+  rules:
+    - host: baas-dev.fidi.money
+      http:
+        paths:
+          - backend:
+              service:
+                name: go-ms-baas-test
+                port:
+                  number: 8080
+            path: /test/
+            pathType: Prefix
